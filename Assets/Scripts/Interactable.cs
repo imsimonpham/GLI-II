@@ -36,7 +36,7 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _uiContainer.SetActive(false);
-            _uiContainer.SetActive(true);
+            _isInteractable = false;
         }
     }
 }
