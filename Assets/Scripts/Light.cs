@@ -26,4 +26,9 @@ public class Light : MonoBehaviour, IInteractable
         else
             _emissviveMat.SetColor("_EmissionColor", Color.black);
     }
+
+    public void Activate()
+    {
+
+    }
 }

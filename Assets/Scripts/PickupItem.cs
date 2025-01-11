@@ -8,4 +8,9 @@ public class PickupItem : MonoBehaviour, IInteractable
     {
         Debug.Log("Interacting with " + gameObject.name);
     }
+
+    public void Activate()
+    {
+
+    }
 }
