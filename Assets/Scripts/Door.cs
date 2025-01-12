@@ -32,8 +32,7 @@ public class Door : MonoBehaviour, IInteractable
             _anim.SetBool("IsOpen", _isOpen);
         } else {
             Debug.Log("Door is locked");
-        }
-        
+        } 
     }
 
     public void Activate()
