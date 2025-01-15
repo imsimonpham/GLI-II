@@ -5,7 +5,7 @@ using UnityEngine;
 public class Terminal : MonoBehaviour, IInteractable
 {
     public GameObject[] targets;
-    public bool isPoweredUp;
+    /*public bool isPoweredUp;*/
 
     public void Interact()
     {
@@ -18,8 +18,5 @@ public class Terminal : MonoBehaviour, IInteractable
         }
     }
 
-    public void Activate()
-    {
-        
-    }
+    public void Activate() { }
 }
