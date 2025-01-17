@@ -11,9 +11,10 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pad"))
         {
+            _isActivated = true;
             foreach (GameObject target in _targets)
             {
-                if(target.TryGetComponent<IInteractable>(out IInteractable interactable))
+                if (target.TryGetComponent<IInteractable>(out IInteractable interactable))
                     interactable.Activate(_isActivated);
             }
         }
@@ -23,6 +24,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pad"))
         {
+            _isActivated = false;
             foreach (GameObject target in _targets)
             {
                 if (target.TryGetComponent<IInteractable>(out IInteractable interactable))

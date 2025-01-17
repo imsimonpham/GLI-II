@@ -13,6 +13,7 @@ public class Terminal : MonoBehaviour, IInteractable
         {
             if(target.TryGetComponent<IInteractable>(out IInteractable interactable))
             {
+                _isActivated = true;
                 interactable.Activate(_isActivated);
             }
         }
