@@ -1528,7 +1528,7 @@ PrefabInstance:
     - target: {fileID: 5885216827943657505, guid: 64dce48905ffd9b4293e595fa6941544,
         type: 3}
       propertyPath: pushLayers.m_Bits
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2432,6 +2432,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4011629305409974023, guid: be6bb7dc9994b4b4c909190833937bfe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952550694911796043, guid: be6bb7dc9994b4b4c909190833937bfe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6163033147458068724, guid: be6bb7dc9994b4b4c909190833937bfe,
         type: 3}
       propertyPath: m_IsActive
@@ -2440,7 +2450,12 @@ PrefabInstance:
     - target: {fileID: 8220540679149393983, guid: be6bb7dc9994b4b4c909190833937bfe,
         type: 3}
       propertyPath: m_Name
-      value: PressurePad
+      value: PressurePlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220540679149393983, guid: be6bb7dc9994b4b4c909190833937bfe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pad
       objectReference: {fileID: 0}
     - target: {fileID: 8333630102719122421, guid: be6bb7dc9994b4b4c909190833937bfe,
         type: 3}
@@ -2497,6 +2512,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8975361644759341989, guid: be6bb7dc9994b4b4c909190833937bfe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2505,6 +2525,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1279649010}
+    - targetCorrespondingSourceObject: {fileID: 8220540679149393983, guid: be6bb7dc9994b4b4c909190833937bfe,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1279649011}
     - targetCorrespondingSourceObject: {fileID: 6163033147458068724, guid: be6bb7dc9994b4b4c909190833937bfe,
         type: 3}
       insertIndex: -1
@@ -2539,12 +2563,26 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9870028, y: 0.021806568, z: 2.0010715}
-  m_Center: {x: -0.0062692165, y: -0.03873109, z: 0.0009942055}
+  m_Size: {x: 1.9929929, y: 0.051980264, z: 2.0010715}
+  m_Center: {x: -0.0032742023, y: -0.032740958, z: 0.0009942055}
+--- !u!114 &1279649011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141417539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55f3a2b9d756d448b88c27626755817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targets:
+  - {fileID: 1829763242}
 --- !u!1 &1298224284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8101059038783356897, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
@@ -2622,7 +2660,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 0c147a69333384d648a4d99c1934762b,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4473,9 +4511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6ec5f73196693448e033ba25e2dba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
+  _targets:
   - {fileID: 1298224284}
-  isPoweredUp: 0
 --- !u!114 &3179571811993145289
 MonoBehaviour:
   m_ObjectHideFlags: 0

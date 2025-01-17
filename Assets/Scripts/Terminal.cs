@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Terminal : MonoBehaviour, IInteractable
 {
-    public GameObject[] targets;
-    /*public bool isPoweredUp;*/
+    [SerializeField] private GameObject[] _targets;
+    [SerializeField] private bool _isActivated;
 
     public void Interact()
     {
-        foreach (GameObject target in targets)
+        foreach (GameObject target in _targets)
         {
             if(target.TryGetComponent<IInteractable>(out IInteractable interactable))
             {
-                interactable.Activate();
+                interactable.Activate(_isActivated);
             }
         }
     }
 
-    public void Activate() { }
+    public void Activate(bool isActivated) { }
 }

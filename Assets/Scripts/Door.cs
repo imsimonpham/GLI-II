@@ -35,15 +35,23 @@ public class Door : MonoBehaviour, IInteractable
         } 
     }
 
-    public void Activate()
+    public void Activate(bool isActivated)
     {
-        UnlockDoor();
+        UnlockDoor(isActivated);
     }
 
-    private void UnlockDoor()
+    private void UnlockDoor(bool isActivated)
     {
-        _isLocked = false;
-        _doorControlPanel.transform.GetChild(0).gameObject.SetActive(false);
-        _doorControlPanel.transform.GetChild(1).gameObject.SetActive(true);
+        _isLocked = !isActivated;
+        if (_isLocked)
+        {
+            _doorControlPanel.transform.GetChild(0).gameObject.SetActive(true);
+            _doorControlPanel.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else
+        {
+            _doorControlPanel.transform.GetChild(0).gameObject.SetActive(false);
+            _doorControlPanel.transform.GetChild(1).gameObject.SetActive(true);
+        }
     }
 }
